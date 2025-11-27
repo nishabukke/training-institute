@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">  
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Arena</title>
+</head>
+<body>
+    
+    <header class="header-area header-sticky">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="header-content-area">
+                        <div class="logo-area">
+                            <div class="logo">
+                                <a href="index.html" class="text-white">Arena</a>
+                            </div>
+                        </div>
+                        <div class="tj-menu-area" id="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li>
+                                        <a href="index.html" class="active">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#about">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#services">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#faq">F.A.Q.</a>
+                                    </li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-button">
+                            <a class="tj-secondary-btn" id="openPopup">Request A Callback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h3>Call for more information</h3>
+            <h4>📞 <strong><a target="_blank" href="https://wa.me/1234567890" class="white-btn">+91 12345 67890</a></strong></h4>
+        </div>
+    </div>
+
+    
+    <div class="mobile-header">
+        <div id="mobile-sticky-wrapper" class="mobile-sticky-wrapper">
+            <div class="mobile-sticky-area">
+                <div class="container mobile-menu-container">
+                    <div class="logo">
+                        <a href="index.html" class="text-white fw-semibold">Arena</a>
+                    </div>
+                                        <div class="mobile-menu">
+                                            <a class="canva_expander nav-menu-link menu-button" href="#">
+                                                <span class="dot1"></span>
+                                                <span class="dot2"></span>
+                                                <span class="dot3"></span>
+                                                <span class="dot4"></span>
+                                            </a>
+                                            <button class="cross">&#735;</button>
+                                        <div class="menu">
+                                            <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="#about">About Us</a></li>
+                                            <li><a href="#services">Services</a></li>
+                                            <li><a href="#faq">F.A.Q</a></li>
+                                            <li><a href="#contact">Contact Us</a></li>
+                                            </ul>
+                                        </div> 
+                                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="site-content">
+        <section class="hero-section">
+                <div class="hero-content-inner container">
+                    <div class="left-hero-content">
+                        <h1 class="hero-title">Enquire Now</h1>
+                        <form id="consultForm" method="POST">
+            <div class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Your Name *" required>
+            </div>
+
+            <div class="mb-3">
+                <input type="tel" name="phone" maxlength="10" pattern="[0-9]{10}" class="form-control" placeholder="Phone Number *" required>
+            </div>
+
+            <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Email Address *" required>
+            </div>
+
+            <button type="submit" class="btn tj-secondary-btn w-100">Submit Enquiry</button>
+                        </form>
+                    </div>
+                    <div class="right-hero-content">
+                        <div class="hero-content container hero-section-inner effectFadeInUp" style="animation-delay: 100ms;">
+                            <h1 class="hero-title">Become a Skilled Digital Marketer <span>in Just 3 Months</span></h1>
+                            <div class="desc">
+                                <p>Learn SEO • Social Media • Google Ads • AI tools • Influencer Marketing</p>
+                            </div>
+
+                            <ul class="list-unstyled">
+                                <li class="mb-2">✔ SEO, SEM, Google Ads</li>
+                                <li class="mb-2">✔ Social Media Marketing for all platforms</li>
+                                <li class="mb-2">✔ Branding and content creation</li>
+                                <li class="mb-2">✔ AI-powered marketing tools</li>
+                                <li class="mb-2">✔ Video editing & motion graphics</li>
+                                <li class="mb-2">✔ Real projects + internship</li>
+                                <li class="mb-2">✔ Placement assistance</li>
+                                <li class="mb-2">✔ Lifetime notes and recordings</li>
+                            </ul>          
+                        </div>
+                    </div>
+                </div>
+                <div class="blur-area"></div>
+                <div class="blur-area-right"></div>
+        </section>
+
+        <section class="why-choose-section section-lg container">
+            <div class="common-heading">
+                <h2>Why Choose <span>Arena</span></h2>
+            </div>
+            <div class="why-choose-inner">
+                <div class="why-choose-item">
+                    <div class="blur-why-choose"></div>
+                    <img src="images/why-choose1.png" alt="">
+                    <h4 class="text-white m-0">Expert-Led Digital Marketing Training</h4>
+                    <p>Learn from experienced trainers who work on real industry projects. Every session is practical, easy to follow, and focused on skills you can use right away.</p>
+                </div>
+                <div class="why-choose-item">
+                    <div class="blur-why-choose"></div>
+                    <img src="images/why-choose1.png" alt="">
+                    <h4 class="text-white m-0">Expert-Led Digital Marketing Training</h4>
+                    <p>Learn from experienced trainers who work on real industry projects. Every session is practical, easy to follow, and focused on skills you can use right away.</p>
+                </div>
+                <div class="why-choose-item">
+                    <div class="blur-why-choose"></div>
+                    <img src="images/why-choose1.png" alt="">
+                    <h4 class="text-white m-0">Expert-Led Digital Marketing Training</h4>
+                    <p>Learn from experienced trainers who work on real industry projects. Every session is practical, easy to follow, and focused on skills you can use right away.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section container section-lg mt-5">
+            <div class=" about-inner">
+                <div class="left-about">
+                    <img src="images/about-img.jpg" alt="">
+                </div>
+                <div class="right-about">
+                    <div class="common-heading">
+                        <h2>The <span>Arena</span> Approach</h2>
+                    </div>
+                    <div class="common-content">
+                        <p>Digital marketing changes fast, and we make sure you stay ahead of it. At Arena, you learn directly from trainers who work hands-on in the industry and genuinely want to see you grow. Our digital marketing courses are designed to give you personal attention, practical learning, and complete clarity on every topic.</p>
+                        <p>We cover everything you need to build a strong career - SEO, Google Ads, Social Media Marketing, Email Marketing, Mobile Marketing, Digital Branding, Content Marketing, Affiliate Marketing, and more. Arena also offers Diploma programs in Digital Marketing, Graphic Design, and Web Design to support your long-term career goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="module-section section-lg container" id="services">
+            <div class="common-heading">
+                <h2>Explore <span>Arena's</span> Learning Modules</h2>
+            </div>
+            <div class="module-inner">
+                <div class="module-item">
+                    <h5>Digital Marketing Overview</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Search Engine Optimization</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Content Marketing</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Website Creation Using WordPress</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Google Analytics</h5>
+                </div>
+                <div class="module-item">
+                    <h5> Understanding Acquisition & Conversion data</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Google Search Console</h5>
+                </div>
+                <div class="module-item">
+                    <h5> Voice Search Optimization</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Google My Business: Local Listings</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Social Media Optimization</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Video SEO</h5>
+                </div>
+                <div class="module-item">
+                    <h5>YouTube Monetization</h5>
+                </div>
+                <div class="module-item">
+                    <h5> Social Media Tools</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Social Media Automation</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Facebook Advertising</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Instagram Ads</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Linkedin Ads</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Youtube Advertising</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Google PPC</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Image Ads</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Video Ads</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Discovery Ads</h5>
+                </div>
+                <div class="module-item">
+                    <h5>Bidding Strategies in Google Ads</h5>
+                </div>
+                <div class="module-item">
+                    <h5> Lead Generation for Business</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="certification-section section-lg ">
+            <div class="common-heading container mb-5">
+                <h2>Earn 15+ Google Certifications with <span>Arena</span></h2>
+            </div>
+            <div class="wrapper">
+                <div class="itemLeft item1"><img src="images/google-certificate.webp" alt=""></div>
+                <div class="itemLeft item2"><img src="images/google-certificate.webp" alt=""></div>
+                <div class="itemLeft item3"><img src="images/google-certificate.webp" alt=""></div>
+                <div class="itemLeft item4"><img src="images/google-certificate.webp" alt=""></div>
+                <div class="itemLeft item5"><img src="images/google-certificate.webp" alt=""></div>
+                <div class="itemLeft item6"><img src="images/google-certificate.webp" alt=""></div>
+                <div class="itemLeft item7"><img src="images/google-certificate.webp" alt=""></div>
+                <div class="itemLeft item8"><img src="images/google-certificate.webp" alt=""></div>
+            </div>
+                <div class="wrapper">
+                <div class="itemRight item1"><img src="images/google-certificate1.webp" alt=""></div>
+                <div class="itemRight item2"><img src="images/google-certificate1.webp" alt=""></div>
+                <div class="itemRight item3"><img src="images/google-certificate1.webp" alt=""></div>
+                <div class="itemRight item4"><img src="images/google-certificate1.webp" alt=""></div>
+                <div class="itemRight item5"><img src="images/google-certificate1.webp" alt=""></div>
+                <div class="itemRight item6"><img src="images/google-certificate1.webp" alt=""></div>
+                <div class="itemRight item7"><img src="images/google-certificate1.webp" alt=""></div>
+                <div class="itemRight item8"><img src="images/google-certificate1.webp" alt=""></div>
+            </div>
+        </section>
+
+        <section class="tools-section section-lg container">
+            <div class="common-heading"><h2><span>Arena's</span> Toolset for Modern Marketers</h2></div>
+            <div class="tools-inner">
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+                <div class="tool-item"><img src="images/digital-marketing-tools.png" alt=""></div>
+            </div>
+        </section>
+
+        <section class="faq-section section-lg container" id="faq">
+            <div class="service-heading">
+                <div class="common-heading">
+                    <h2 class="text-center">Frequently Asked Questions</h2>
+                </div>
+            </div>
+            <div class="que-container">
+                <div class="question">
+                <button>
+                    <span>1. Lorem ipsum dolor sit, amet consectetur adipisicing elit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus neque magnam, iure cum eum debitis doloremque facilis sapiente asperiores!</p>
+                </div>
+                <div class="question">
+                <button>
+                    <span>2. Lorem ipsum dolor sit, amet consectetur adipisicing elit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus neque magnam, iure cum eum debitis doloremque facilis sapiente asperiores!</p>
+                </div>
+                <div class="question">
+                <button>
+                    <span>3. Lorem ipsum dolor sit, amet consectetur adipisicing elit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus neque magnam, iure cum eum debitis doloremque facilis sapiente asperiores!</p>
+                </div>
+                <div class="question">
+                <button>
+                    <span>4. Are the plots ready for immediate possession?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus neque magnam, iure cum eum debitis doloremque facilis sapiente asperiores!</p>
+                </div>
+                <div class="question">
+                <button>
+                    <span>5. Lorem ipsum dolor sit, amet consectetur adipisicing elit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus neque magnam, iure cum eum debitis doloremque facilis sapiente asperiores!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-contact-section section-lg container" id="contact">
+            <div class="cta-contact-inner">
+                <div class="common-heading">
+                <h2 class="text-center text-white">Take the First Step Toward Your Career</h2>
+            </div>
+            <p class="text-white">Enroll at Arena and begin learning with experts who guide you at every stage. Get hands-on practice, real project experience, and the support you need to build a strong career in digital marketing.</p>
+            <div class="white-btn">Download Syllabus <span class="fas fa-arrow-right"></span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="section-lg pb-0">
+        <div class="footer-inner container-fluid">
+            <div class="footer-item">
+                <h2 class="text-white">Arena</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum doloremque sunt eaque animi error nemo ea facere consectetur quasi est, corporis architecto odit tempore dolore perferendis, commodi, debitis accusantium id.</p>
+            </div>
+            <div class="footer-item">
+                <h4 class="text-white">Useful Links</h4>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Course Details</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4 class="text-white">Get In Touch</h4>
+                <ul>
+                    <li><span class="fas fa-phone"></span> +91 12345 67890</li>
+                    <li><span class="fas fa-location"></span> Pune, Maharashtra</li>
+                    <li><span class="fas fa-envelope"></span> someone@example.com</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4 class="text-white">Social Media</h4>
+                <div class="social-icons">
+                    <a href="#"><span class="fa-brands fa-instagram"></span></a>
+                    <a href="#"><span class="fa-brands fa-instagram"></span></a>
+                    <a href="#"><span class="fa-brands fa-instagram"></span></a>
+                    <a href="#"><span class="fa-brands fa-instagram"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="lower-footer container-fluid">
+            <p class="text-center">Copyright © 2025 Arena. All rights reserved.</p>
+            <p class="text-center">Social Icons</p>
+        </div>
+    </footer>
+
+    <!-- script files -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+
+  <script>
+        const openBtn = document.getElementById("openPopup");
+        const closeBtn = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+
+        openBtn.addEventListener("click", () => {
+            popup.style.display = "flex";
+        });
+
+        closeBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+        // Close popup if user clicks outside content box
+        window.addEventListener("click", (e) => {
+            if (e.target === popup) {
+            popup.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
