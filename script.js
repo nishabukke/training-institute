@@ -1,10 +1,36 @@
+
+  const text = document.querySelector(".about-text");
+  const words = text.textContent.split(" ");
+
+  // Split text into spans for per-word animation
+  text.innerHTML = words.map(word => `<span class="word">${word}</span>`).join(" ");
+
+  gsap.set(".word", { color: "#999" }); // start faded
+
+  gsap.to(".word", {
+    color: "#13074f", // darker color when active
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".about-text",
+      start: "top 70%",
+      end: "bottom 30%",
+      scrub: true,
+    }
+  });
+
+  const copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
+
 // sticky header
 
 $(window).on("scroll touchmove", function() {
 
     if ($(document).scrollTop() > $(".header-area").position().top) {
-      $('.header-area').css('background', '#000');
-  
+      $('.header-area').css('background', '#fff');
+      // $('.header-area').css('max-width', '1600px');
+      // $('.header-area').css('margin', '0px auto');
+      // $('.header-area').css('border-top-left-radius', '0px');
+      // $('.header-area').css('border-top-right-radius', '0px');
     }
     else{
     $('.header-area').removeAttr('style');
@@ -83,8 +109,8 @@ $(window).on("scroll touchmove", function() {
     $('.mobile-sticky-area').css('margin', '0 auto');
     $('.mobile-sticky-area').css('position', 'fixed');
     $('.mobile-sticky-area').css('top', '0px');
-    $('.mobile-sticky-area').css('background', '#000000');
-    $('.mobile-sticky-area').css('border-bottom', '1px solid #1e3a8a33');
+    $('.mobile-sticky-area').css('background', '#fff');
+    $('.mobile-sticky-area').css('border', '1px solid #1e3a8a33');
     $('.mobile-sticky-area').css('z-index', '1');
     $('#mobile-sticky-wrapper').addClass('is-sticky');
 
