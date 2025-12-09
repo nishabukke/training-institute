@@ -7,7 +7,7 @@
 
 /* thank you modal css start */
 
-.thankyou-modal {
+.thankyou-modal , #thankyouModal {
   display: none;
   position: fixed;
   z-index: 999999;
@@ -39,7 +39,7 @@
   color: #191919;
 }
 
-.close-thanks {
+.close-thanks , #thankyouModal .closeThanks {
   position: absolute;
   right: 20px;
   top: 18px;

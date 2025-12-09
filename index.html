@@ -42,7 +42,7 @@
                             </nav>
                         </div>
                         <div class="header-button">
-                            <a class="tj-secondary-btn" id="openPopup">Request A Callback</a>
+                            <a href="#" class="tj-secondary-btn" id="openPopup">Request A Callback</a>
                         </div>
                     </div>
                 </div>
@@ -51,15 +51,18 @@
     </header>
 
     <div class="popup" id="popup">
-        <div class="popup-content">
-            <span class="close-btn" id="closePopup">&times;</span>
-            <h3>Call for more information</h3>
-            <h4>📞 <strong>
+    <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+
+        <h3>Call for more information</h3>
+        <h4>
+            📞 <strong>
                 <a target="_blank" href="https://wa.me/8182001234" class="white-btn">+91 81820 01234</a>
             </strong>
         </h4>
-        </div>
+
     </div>
+</div>
     
     <div class="mobile-header">
         <div id="mobile-sticky-wrapper" class="mobile-sticky-wrapper">
@@ -198,31 +201,31 @@
         </section>
 
         <div id="enrollModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+            <div class="modal-content">
+                <span class="close">&times;</span>
 
-            <h3>Enroll Now</h3>
+                <h3>Enroll Now</h3>
 
-            <form id="enrollForm">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Email Address" required />
-            <input type="tel" placeholder="Phone Number" required />
+                <form id="enrollForm" method="POST">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Email Address" required />
+                <input type="tel" placeholder="Phone Number" required />
 
-            <select required>
-                <option value="">Your Occupation</option>
-                <option value="bsc">12th</option>
-                <option value="bsc">BSc</option>
-                <option value="bca">BCA</option>
-                <option value="bcs">BCs</option>
-                <option value="bcom ">BCom</option>
-                <option value="entrepreneur">Entrepreneur</option>
-                <option value="freelancer ">Freelancer</option>
-            </select>
+                <select required>
+                    <option value="">Your Occupation</option>
+                    <option value="bsc">12th</option>
+                    <option value="bsc">BSc</option>
+                    <option value="bca">BCA</option>
+                    <option value="bcs">BCs</option>
+                    <option value="bcom ">BCom</option>
+                    <option value="entrepreneur">Entrepreneur</option>
+                    <option value="freelancer ">Freelancer</option>
+                </select>
 
-            <button type="submit" class="submit-btn">Submit</button>
-            </form>
+                <button type="submit" class="submit-btn">Submit</button>
+                </form>
 
-        </div>
+            </div>
         </div>
 
         <div id="thankyouModal" class="modal">
@@ -532,6 +535,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js" integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 
+    
+    <script>
+        const openBtn = document.getElementById("openPopup");
+        const closeBtnPopup = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+
+        openBtn.addEventListener("click", () => {
+            popup.style.display = "flex";
+        });
+
+        closeBtnPopup.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+        // Close popup if user clicks outside content box
+        window.addEventListener("click", (e) => {
+            if (e.target === popup) {
+            popup.style.display = "none";
+            }
+        });
+
+    </script>
+
     <script>
         document.getElementById("consultForm").addEventListener("submit", function(e) {
             e.preventDefault();
@@ -568,25 +594,6 @@
     </script>
 
     <script>
-        const openBtn = document.getElementById("openPopup");
-        const closeBtn = document.getElementById("closePopup");
-        const popup = document.getElementById("popup");
-
-        openBtn.addEventListener("click", () => {
-            popup.style.display = "flex";
-        });
-
-        closeBtn.addEventListener("click", () => {
-            popup.style.display = "none";
-        });
-
-        // Close popup if user clicks outside content box
-        window.addEventListener("click", (e) => {
-            if (e.target === popup) {
-            popup.style.display = "none";
-            }
-        });
-
         document.getElementById("enrollForm").addEventListener("submit", function(e) {
             e.preventDefault();
 
@@ -600,6 +607,7 @@
             .then(data => {
                 // Show Thank You Modal
                 document.getElementById("thankyouModal").style.display = "block";
+                document.getElementById("enrollModal").style.display = "none";
 
                 // Clear form after success
                 document.getElementById("enrollForm").reset();
@@ -613,7 +621,6 @@
         document.querySelector(".closeThanks").onclick = function() {
             document.getElementById("thankyouModal").style.display = "none";
         };
-
     </script>
 </body>
 </html>
