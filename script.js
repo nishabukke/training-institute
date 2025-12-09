@@ -111,7 +111,7 @@ $(window).on("scroll touchmove", function() {
     $('.mobile-sticky-area').css('top', '0px');
     $('.mobile-sticky-area').css('background', '#fff');
     $('.mobile-sticky-area').css('border', '1px solid #1e3a8a33');
-    $('.mobile-sticky-area').css('z-index', '1');
+    $('.mobile-sticky-area').css('z-index', '9999');
     $('#mobile-sticky-wrapper').addClass('is-sticky');
 
   }
@@ -150,3 +150,24 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("thankYouBox").style.display = "none";
     };
 });
+
+
+
+const modal = document.getElementById("enrollModal");
+const openModal = document.getElementById("openModal");
+const closeBtn = document.querySelector(".close");
+
+openModal.onclick = function(e) {
+  e.preventDefault();
+  modal.style.display = "block";
+}
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
